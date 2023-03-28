@@ -1,0 +1,592 @@
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    z-index: -2;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* END Global Rules */
+/* Start Variables */
+:root {
+    --main-color: #F9F9F9;
+    --main2-color: #999999;
+    --main3-color: #FF4F5B;
+    --main4-color: #222222;
+    --main5-color: #333333;
+    --main6-color: #767676;
+    --main-padding: 50px;
+}
+/* END Variables */
+
+/* start main-head */
+.main-head {
+    font-size: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 10px auto 40px;
+    text-align: center;
+    color: var(--main6-color);
+}
+.main-head span {
+    color: var(--main3-color);
+}
+/* end main-head */
+
+/* start header */
+header {
+    box-shadow: 0px 0px 14px -4px var(--main2-color);
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container > a {
+    padding: 20px 0;
+    font-weight: 500;
+}
+header .container > a span {
+    color: black;
+    font-size: 28px;
+}
+header .container > a img {
+    width: 25px;
+    animation: scl 1.5s linear 0s alternate infinite none running;
+}
+@keyframes scl {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+header .container nav {
+    display: flex;
+}
+header .container nav > i {
+    color: var(--main3-color);
+    font-size: 30px;
+    padding: 22px 15px;
+    display: none;
+}
+header .container nav ul {
+    display: flex;
+}
+header .container nav ul li {
+    padding: 20px 10px;
+}
+header .container nav ul li a {
+    color: var(--main6-color);
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+}
+header .container nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+header .container nav ul li:first-of-type a::after,
+header .container nav ul li a:hover::after {
+    transform: translateY(12px);
+    background-color: var(--main3-color);
+}
+@media (max-width:991px) {
+    header .container nav > i {
+        display: block;
+    }
+    header .container nav ul {
+        position: absolute;
+        top: 73px;
+        background-color: white;
+        flex-direction: column;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+    header .container nav:hover ul {
+        display: block;
+    }
+}
+/* end header */
+
+/* start landing */
+.landing {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--main-color);
+    height: 100vh;
+}
+.landing .container {
+    display: flex;
+    align-items: center;
+}
+.landing .container .content {
+    width: 50%;
+}
+.landing .container .content h2 {
+    color: var(--main3-color);
+    padding: 10px 20px;
+    font-weight: 600;
+}
+.landing .container .content h3 {
+    padding: 10px 20px;
+    color: var(--main2-color);
+    font-size: 50px;
+}
+.landing .container .content p {
+    padding: 10px 20px;
+    color: var(--main2-color);
+    line-height: 1.8;
+}
+.landing .container .content a {
+    padding: 10px 30px;
+    color: white;
+    background-color: var(--main3-color);
+    border-radius: 24px;
+    margin: auto;
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.landing .container .content a:hover {
+    background-color: #A6343B;
+}
+.landing .container .image {
+    width: 50%;
+}
+.landing .container .image img {
+    width: 100%;
+    max-width: 100%;
+}
+@media (max-width:991px) {
+    .landing .container {
+        padding-top: 50px;
+    }
+}
+@media (max-width:767px) {
+    .landing {
+        height: auto;
+    }
+    .landing .container {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+    .landing .container .content {
+        width: 100%;
+        text-align: center;
+    }
+    .landing .container .content h3 {
+        font-size: 30px;
+    }
+    
+}
+/* end landing */
+
+/* start protect */
+.protect {
+    background-color: var(--main-color);
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.protect .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.protect .container .box {
+    text-align: center;
+    width: 300px;
+    margin-bottom: 35px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px 4px #EEE;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+.protect .container .box:hover {
+    transform: translateY(-10px);
+}
+.protect .container .box .image {
+    width: 70%;
+    margin: 3px auto;
+}
+.protect .container .box .image img {
+    width: 100%;
+    max-width: 100%;
+}
+.protect .container .box h3 {
+    color: var(--main2-color);
+    padding: 10px;
+}
+.protect .container .box p {
+    color: var(--main2-color);
+    font-size: 15px;
+    line-height: 1.6;
+    height: 180px;
+}
+.protect .container .box a {
+    padding: 6px 30px;
+    color: white;
+    background-color: var(--main3-color);
+    border-radius: 24px;
+    margin: auto;
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 20px;
+    transition: 0.6s;
+}
+.protect .container .box a:hover {
+    background-color: #A6343B;
+}
+/* end protect */
+
+/* start symptoms */
+.symptoms {
+    background-color: var(--main-color);
+    padding-top: calc(var(--main-padding) + 50px);
+    padding-bottom: var(--main-padding);
+}
+.symptoms .container {
+    display: flex;
+    align-items: center;
+}
+.symptoms .container .content {
+    width: 55%;
+}
+.symptoms .container .content h2 {
+    color: var(--main2-color);
+    font-size: 25px;
+    padding: 20px 0;
+}
+.symptoms .container .content h2 span {
+    color: var(--main3-color);
+}
+.symptoms .container .content p {
+    color: var(--main2-color);
+    line-height: 1.6;
+    font-size: 15px;
+    width: 80%;
+}
+.symptoms .container .content .list {
+    display: flex;
+    margin-top: 25px;
+}
+.symptoms .container .content ul {
+    list-style: outside;
+    color: var(--main5-color);
+    width: 45%;
+    padding-left: 20px;
+}
+.symptoms .container .content li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.symptoms .container .image {
+    width: 45%;
+}
+.symptoms .container .image img {
+    width: 100%;
+    max-width: 100%;
+}
+@media (max-width:991px) {
+    .symptoms .container .content .list {
+        flex-direction: column;
+    }
+}
+@media (max-width:767px) {
+    .symptoms .container {
+        flex-direction: column;
+    }
+    .symptoms .container .content {
+        width: 90%;
+    }
+    .symptoms .container .content ul {
+        width: 100%;
+    }
+    .symptoms .container .image {
+        width: 100%;
+        margin-top: 25px;
+    }
+}
+/* end symptoms */
+
+/* start prevent */
+.prevent {
+    background-color: var(--main4-color);
+}
+.prevent .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.prevent .container .image {
+    width: 45%;
+}
+.prevent .container .image img {
+    width: 100%;
+}
+.prevent .container .content {
+    width: 55%;
+}
+.prevent .container .content h3 {
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+}
+.prevent .container .content h3 span {
+    color: var(--main3-color);
+}
+.prevent .container .content p {
+    color: white;
+    padding: 10px 0px 10px 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.prevent .container .content ul {
+    list-style: outside;
+    padding: 0 30px;
+    margin-top: 20px;
+}
+.prevent .container .content ul li {
+    color: var(--main2-color);
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+@media (max-width:767px) {
+    .prevent .container {
+        flex-direction: column;
+    }
+    .prevent .container .image {
+        width: 90%;
+    }
+    .prevent .container .content {
+        width: 90%;
+    }
+}
+/* end prevent */
+
+/* start handwash */
+.handwash {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--main-color);
+}
+.handwash .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+.handwash .container .box {
+    width: 250px;
+    height: 250px;
+    border: 1px solid #EEE;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    counter-increment: h-m-o-b;
+    position: relative;
+    transition: 0.3s;
+}
+.handwash .container .box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 0 25px 4px #EEE;
+}
+.handwash .container .box::after {
+    content: '0' counter(h-m-o-b);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--main3-color);
+    color: white;
+    top: -25px;
+    left: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.handwash .container .box .image {
+    margin: auto;
+}
+.handwash .container .box h3 {
+    color: var(--main6-color);
+    margin: auto;
+}
+/* end handwash */
+
+/* start spread */
+.spread {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--main-color);
+}
+.spread .container img {
+    width: 100%;
+    max-width: 100%;
+}
+/* end spread */
+
+/* start footer */
+footer {
+    padding-top: var(--main-padding);
+    background-color: var(--main4-color);
+    color:white;
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}   
+footer .container .contact {
+    width: 60%;
+}
+footer .container .contact h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+footer .container .contact div i {
+    font-size: 25px;
+    margin: 10px;
+    color: var(--main3-color);
+}
+footer .container .contact .links {
+    display: flex;
+    margin: 15px 30px;
+    width: fit-content;
+}
+footer .container .contact .links li a {
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+footer .container .contact .links li a:hover {
+    background-color: white;
+}
+footer .container .contact .links li a i {
+    font-size: 15px;
+    color: white;
+    transition: 0.3s;
+}
+footer .container .contact .links li a:hover i {
+    color: var(--main3-color);
+}
+footer .container .others {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+footer .container .others ul li {
+    display: flex;
+    align-items: center;
+}
+footer .container .others ul li a {
+    color: white;
+    padding: 10px;
+    transition: 0.3s;
+}
+footer .container .others ul li a:hover {
+    color: var(--main3-color);
+}
+footer .container .others ul li img {
+
+}
+footer .right {
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+footer .right a {
+    color: var(--main3-color);
+}
+footer .back {
+    position: fixed;
+    background-image: url(../img/virus-1.png);
+    background-size: cover;
+    color: white;
+    bottom: 30px;
+    right: 30px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: back-k 1.5s linear 0s alternate infinite none running;
+}
+@keyframes back-k {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+@media (max-width:767px) {
+    footer .container {
+        flex-direction: column;
+    }
+    footer .container .contact {
+        width: 100%;
+    }
+    footer .container .others {
+        width: 100%;
+    }
+}
+/* end footer */

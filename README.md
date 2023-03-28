@@ -1,0 +1,1 @@
+# awareness-covid-template
